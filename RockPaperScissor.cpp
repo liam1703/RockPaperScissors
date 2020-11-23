@@ -58,7 +58,7 @@ int validInput(string inp)
     
 }
 
-int getComChoice()
+int GetComChoice()
 {
     int com = (rand()%3)+1;
 }
@@ -68,10 +68,13 @@ int getComChoice()
 
 
 int main()
-{
+{   
     PrintIntro();
-
-
+    bool Playing = true;
+    int UserScore=0;
+    int ComScore=0;
+    int user = GetUserChoice();
+    int com = GetComChoice();
 
 
     return 0;
