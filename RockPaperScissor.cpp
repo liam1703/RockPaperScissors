@@ -31,8 +31,9 @@ int validInput(string inp)
 {
     string ValidOpOne = "ROCK";
     string ValidOpTwo = "PAPER";
-    string validOpThree = "SCISSOTS";
-    if(inp.compare(ValidOpOne)!= 0 || inp.compare(ValidOpTwo)!= 0 || inp.compare(validOpThree)!= 0)
+    string ValidOpThree = "SCISSOTS";
+    string Quit ="Q";
+    if(inp.compare(ValidOpOne)!= 0 || inp.compare(ValidOpTwo)!= 0 || inp.compare(ValidOpThree)!= 0 || inp.compare(Quit)!= 0)
         return 0;
     else
     {
@@ -44,6 +45,10 @@ int validInput(string inp)
         {
             return 2;
         }
+        else if (inp.compare(Quit) == 0)
+        {
+            return 4;
+        }
         else
         {
             return 3;
@@ -53,6 +58,24 @@ int validInput(string inp)
     
 }
 
+int getComChoice()
+{
+    int com = (rand()%3)+1;
+}
+
+
+
+
+
+int main()
+{
+    PrintIntro();
+
+
+
+
+    return 0;
+}
 
 
 
