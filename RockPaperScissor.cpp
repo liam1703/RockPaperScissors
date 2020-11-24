@@ -15,24 +15,13 @@ void PrintIntro()
     
 }
 
-int GetUserChoice()
-{
-    string UserChoice;
-    std::cin >> UserChoice;
-    std::cout << "\n";
 
-//now need to check users choice is one of ROCK PAPER SCISSORS
-    int ChoiceNum = validInput(UserChoice);
-    return ChoiceNum;
-
-}
-
-int validInput(string inp)
+int ValidInput(string inp)
 {
     string ValidOpOne = "ROCK";
     string ValidOpTwo = "PAPER";
     string ValidOpThree = "SCISSOTS";
-    string Quit ="Q";
+    string Quit ="QUIT";
     if(inp.compare(ValidOpOne)!= 0 || inp.compare(ValidOpTwo)!= 0 || inp.compare(ValidOpThree)!= 0 || inp.compare(Quit)!= 0)
         return 0;
     else
@@ -57,6 +46,21 @@ int validInput(string inp)
     }
     
 }
+
+
+int GetUserChoice()
+{
+    string UserChoice;
+    std::cin >> UserChoice;
+    std::cout << "\n";
+
+//now need to check users choice is one of ROCK PAPER SCISSORS
+    int ChoiceNum = ValidInput(UserChoice);
+    return ChoiceNum;
+
+}
+
+
 
 int GetComChoice()
 {
@@ -90,11 +94,21 @@ int main()
         int User = GetUserChoice();
         if (User == 4)
         {
-            Playing = false;
+            break;
         }
         
         int Com = GetComChoice();
-        int Winner;
+        int Winner = CompareChoice(User, Com);
+        if (Winner == 1)
+        {
+            UserScore++;
+        }
+        if(Winner == 2)
+        {
+            ComScore++;
+        }
+
+        
 
     }
     return 0;
