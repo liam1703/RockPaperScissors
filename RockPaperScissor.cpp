@@ -63,6 +63,18 @@ int GetComChoice()
     int com = (rand()%3)+1;
 }
 
+int CompareChoice(int UserOp, int ComOpt)
+{
+    if(UserOp == ComOpt)
+        return 0;
+    else if((UserOp == 1 && ComOpt == 3) || (UserOp == 2 && ComOpt == 1) || (UserOp == 3 && ComOpt == 2) )
+        return 1;
+    else
+    {
+        return 2;
+    }
+    
+}
 
 
 
@@ -71,12 +83,20 @@ int main()
 {   
     PrintIntro();
     bool Playing = true;
-    int UserScore=0;
-    int ComScore=0;
-    int user = GetUserChoice();
-    int com = GetComChoice();
+    while(Playing)
+    {
+        int UserScore=0;
+        int ComScore=0;
+        int User = GetUserChoice();
+        if (User == 4)
+        {
+            Playing = false;
+        }
+        
+        int Com = GetComChoice();
+        int Winner;
 
-
+    }
     return 0;
 }
 
