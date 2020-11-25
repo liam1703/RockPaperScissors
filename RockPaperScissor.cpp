@@ -22,7 +22,7 @@ int ValidInput(string inp)
     string ValidOpTwo = "PAPER";
     string ValidOpThree = "SCISSOTS";
     string Quit ="QUIT";
-    if(inp.compare(ValidOpOne)!= 0 || inp.compare(ValidOpTwo)!= 0 || inp.compare(ValidOpThree)!= 0 || inp.compare(Quit)!= 0)
+    if(inp.compare(ValidOpOne)!= 0 && inp.compare(ValidOpTwo)!= 0 && inp.compare(ValidOpThree)!= 0 && inp.compare(Quit)!= 0)
         return 0;
     else
     {
@@ -94,6 +94,7 @@ int main()
         int User = GetUserChoice();
         if (User == 4)
         {
+            Playing = false;
             break;
         }
         
