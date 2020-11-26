@@ -11,7 +11,7 @@ using namespace std;
 
 void PrintIntro()
 {
-    std::cout << "Welcome to Rock Paper Scissors press X to quit otherwise type your choice \n";
+    std::cout << "Welcome to Rock Paper Scissors type QUIT to quit otherwise type your choice when prompted too..\n";
     
 }
 
@@ -87,10 +87,12 @@ int main()
 {   
     PrintIntro();
     bool Playing = true;
+    int UserScore=0;
+    int ComScore=0;
     while(Playing)
     {
-        int UserScore=0;
-        int ComScore=0;
+        std::cout <<"The Current Score is User " << UserScore << " - " << ComScore << "Computer \n";
+
         int User = GetUserChoice();
         if (User == 4)
         {
