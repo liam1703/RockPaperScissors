@@ -20,7 +20,7 @@ int ValidInput(string inp)
 {
     string ValidOpOne = "ROCK";
     string ValidOpTwo = "PAPER";
-    string ValidOpThree = "SCISSOTS";
+    string ValidOpThree = "SCISSORS";
     string Quit ="QUIT";
     if(inp.compare(ValidOpOne)!= 0 && inp.compare(ValidOpTwo)!= 0 && inp.compare(ValidOpThree)!= 0 && inp.compare(Quit)!= 0)
         return 0;
@@ -56,6 +56,7 @@ int GetUserChoice()
 
 //now need to check users choice is one of ROCK PAPER SCISSORS
     int ChoiceNum = ValidInput(UserChoice);
+    // std::cout << ChoiceNum;
     return ChoiceNum;
 
 }
@@ -65,6 +66,7 @@ int GetUserChoice()
 int GetComChoice()
 {
     int com = (rand()%3)+1;
+    // std::cout << com;
 }
 
 int CompareChoice(int UserOp, int ComOpt)
@@ -106,7 +108,7 @@ int main()
         {
             UserScore++;
         }
-        if(Winner == 2)
+        else if(Winner == 2)
         {
             ComScore++;
         }
