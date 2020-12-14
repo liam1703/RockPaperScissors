@@ -67,6 +67,7 @@ int GetComChoice()
 {
     int com = (rand()%3)+1;
     // std::cout << com;
+    return com;
 }
 
 int CompareChoice(int UserOp, int ComOpt)
@@ -93,8 +94,8 @@ int main()
     int ComScore=0;
     while(Playing)
     {
-        std::cout <<"The Current Score is User " << UserScore << " - " << ComScore << "Computer \n";
-
+        std::cout <<"The Current Score is User " << UserScore << " - " << ComScore << " Computer \n";
+        std::cout << "Please type your chouce in uppercase\n";
         int User = GetUserChoice();
         if (User == 4)
         {
